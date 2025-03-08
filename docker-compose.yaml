@@ -1,0 +1,13 @@
+services:
+  analys:
+    build: ./analyse
+    container_name: analyse_py
+    tty: true
+    stdin_open: true
+    networks:
+      - stock_pridiction
+    ports:
+      - "80:5000"
+
+networks:
+  stock_pridiction:
