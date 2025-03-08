@@ -3,6 +3,9 @@ from src import analysis
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "hello world"
 
 @app.route('/price_range/<c_name>', methods=['GET'])
 def share_price_arr(c_name):
